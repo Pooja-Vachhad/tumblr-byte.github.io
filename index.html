@@ -261,24 +261,34 @@
       </div>
     </div>
 
-    <!-- 10: R content - NOW -->
+     <!-- 10: L content - SEMANTIC SEGMENTATION -->
     <div class="chapter fi">
-      <div class="col L" style="padding-top:36px">
-        <p class="quote">"The original question was 'how do machines see?' Three years in, I realise it doesn't have a final answer. Every architecture is just a better, deeper answer. <em>That's what keeps me going.</em>"</p>
-      </div>
-      <div class="node-col"><div class="node g"></div></div>
-      <div class="col R">
-        <p class="phase">Currently · Feb 2026</p>
-        <h3 class="ctitle">Advancing Forward</h3>
-        <p class="ctext">Continuing to build production projects and publish to GitHub. Currently studying <strong>semantic segmentation</strong>: U-Net, DeepLab, Mask R-CNN. The jump from bounding boxes to pixel-level understanding.</p>
-        <p class="ctext">Exploring <strong>Siamese networks</strong> for similarity learning and one-shot recognition. Investigating <strong>GANs/SGANs</strong>. Each architecture is a deeper answer to the same original question.</p>
+      <div class="col L">
+        <p class="phase">Semantic Segmentation · Feb 2026</p>
+        <h3 class="ctitle">Pixel-Level Understanding — U-Net</h3>
+        <p class="ctext">After hackathons pushed me into deployment and production projects solidified my pipeline skills, the next frontier was clear: <strong>not just detecting objects — understanding them at the pixel level.</strong></p>
+        <p class="ctext">Studied encoder-decoder architectures, skip connections, and DiceBCE loss. The jump from bounding boxes to masks is a completely different class of problem — and I built a production-grade medical imaging system to prove it.</p>
         <div class="chips">
-          <span class="chip g">U-Net</span><span class="chip g">DeepLab</span>
-          <span class="chip g">Mask R-CNN</span><span class="chip g">Siamese Networks</span>
-          <span class="chip g">GANs / SGANs</span>
+          <span class="chip p">U-Net</span><span class="chip p">ResNet34 Encoder</span>
+          <span class="chip p">DiceBCE Loss</span><span class="chip p">Albumentations</span>
+          <span class="chip p">Medical Imaging</span>
+        </div>
+        <a class="ptrig p" id="trigger-lung" style="margin-bottom:4px"><span class="dot"></span>Lung Segmentation — U-Net ResNet34 · 96.34% Dice</a>
+        <div class="meta-row">
+          <a class="gh-link" href="" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg> GitHub</a>
+          <span class="tl-note">Built Feb 2026</span>
         </div>
       </div>
+      <div class="node-col"><div class="node p"></div></div>
+      <div class="col R" style="padding-top:52px">
+        <p class="quote">"Detection draws a box around something. Segmentation traces every single pixel that belongs to it. It's a different kind of precision — and in medical imaging, that precision is the difference between useful and useless."</p>
+      </div>
     </div>
+
+    <!-- 10: R content - NOW -->
+   <div class="spine-closing fi" style="max-width:480px;margin:0 auto 20px;padding:0 24px 60px;text-align:center;">
+  <p class="quote" style="font-size:14px;line-height:1.9;">"The original question was 'how do machines see?' Three years in, I realise it doesn't have a final answer. Every architecture is just a better, deeper answer. <em>That's what keeps me going.</em>"</p>
+</div>
 
   </div><!-- spine-wrap -->
 
@@ -402,4 +412,5 @@
 </body>
 
 </html>
+
 
