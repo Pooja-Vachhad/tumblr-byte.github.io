@@ -6,30 +6,13 @@ const DATA={
   yoga:{tag:"Production Project · Pose Estimation · Built May 2025",title:"AI Yoga Pose Classifier — 95.4%",desc:"MediaPipe 33 3D landmarks (99 features) → lightweight FC neural net. 95.4% validation accuracy, confidence scores, annotated landmark visualization, clean train/test split.",stats:[{v:"95.4%",l:"Val. Accuracy",c:""},{v:"97.2%",l:"Train Accuracy",c:""},{v:"99",l:"Input Features",c:""},{v:"~50KB",l:"Model Size",c:""}],stack:["MediaPipe","PyTorch","OpenCV","Pandas","scikit-learn"],ac:"cyan",gh:"https://github.com/tumblr-byte/AI-Yoga-Pose-Classifier",media:"yoga.jpg",mediaType:"img"},
   helmet:{tag:"Production Project · Multi-Model Pipeline · Built Jan 2026",title:"Helmet Detection + Number Plate OCR",desc:"YOLO (4 classes) → DeepSORT tracking → 5-frame violation confirmation → custom CRNN (CNN+Bi-LSTM+CTC) reads plates → evidence auto-collected. Full ONNX deployment pipeline.",stats:[{v:"4 Classes",l:"YOLO Detection",c:"p"},{v:"CRNN",l:"From Scratch",c:"p"},{v:"5-Frame",l:"Violation Rule",c:"p"},{v:"ONNX",l:"Deployment Ready",c:""}],stack:["YOLO","DeepSORT","CRNN","Bi-LSTM","CTC","ONNX","OpenCV"],ac:"purple",gh:"https://github.com/tumblr-byte/Helmet_Detection",media:"helmet.mp4",mediaType:"video"},
   medbridge:{tag:"Hackathon Project · Full-Stack AI · Built Dec 2025",title:"MedBridge — Emergency Healthcare",desc:"Right hospital in under 60 seconds. RAG-grounded matching (no hallucinations), Gemini 2s triage, ElevenLabs voice guidance during transit, Datadog LLM observability. Built after personal experience with emergency healthcare delays.",stats:[{v:"< 60s",l:"Response Time",c:"g"},{v:"RAG",l:"No Hallucinations",c:"g"},{v:"2s",l:"Gemini Triage",c:"g"},{v:"Datadog",l:"LLM Monitoring",c:"g"}],stack:["Gemini 2.5 Flash","Vertex AI","Django","ElevenLabs","RAG","Datadog","GCP"],ac:"green",gh:"https://github.com/tumblr-byte/MedBridge",media:"medbridge.mp4",mediaType:"video"},
- lung:{
-  tag:"Production Project · Semantic Segmentation · Built Feb 2026",
-  title:"Lung Segmentation — U-Net ResNet34",
-  desc:"U-Net with ResNet34 encoder for chest X-ray lung segmentation. 96.34% Dice score with proper train/val split, DiceBCE loss, early stopping. Medical imaging application.",
-  stats:[
-    {v:"96.34%",l:"Validation Dice",c:"p"},
-    {v:"96.76%",l:"Training Dice",c:"p"},
-    {v:"256×256",l:"Input Size",c:""},
-    {v:"U-Net",l:"Architecture",c:""}
-  ],
-  stack:["PyTorch","U-Net","ResNet34","Albumentations","Medical Imaging"],
-  ac:"purple",
-  gh:"https://github.com/tumblr-byte/lung-segmentation-unet",
-  media:"lung.png",
-  mediaType:"img"
-}
-
-
+  lung:{tag:"Production Project · Semantic Segmentation · Built Feb 2026",title:"Lung Segmentation — U-Net ResNet34",desc:"U-Net with ResNet34 encoder for chest X-ray lung segmentation. 96.34% Dice score with proper train/val split, DiceBCE loss, early stopping. Medical imaging application.",stats:[{v:"96.34%",l:"Validation Dice",c:"p"},{v:"96.76%",l:"Training Dice",c:"p"},{v:"256×256",l:"Input Size",c:""},{v:"U-Net",l:"Architecture",c:""}],stack:["PyTorch","U-Net","ResNet34","Albumentations","Medical Imaging"],ac:"purple",gh:"",media:"lung.png",mediaType:"img"}
 };
 
-const GH=`<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>`;
 const popup=document.getElementById('proj-popup');
 let hideTimer=null;
 
+// Show popup
 function show(key){
   const d=DATA[key];if(!d)return;
   clearTimeout(hideTimer);
@@ -39,12 +22,12 @@ function show(key){
   const m=document.getElementById('p-media');
   if(d.media){
     m.innerHTML=d.mediaType==='video'
-      ?`<video src="${d.media}" autoplay muted loop playsinline></video><span class="mbadge v">▶ Demo</span>`
-      :`<img src="${d.media}" alt="${d.title}" loading="lazy"/><span class="mbadge i">📷 Preview</span>`;
+      ?`<video src="${d.media}" autoplay muted loop playsinline></video><span class="mbadge v"><i class="fas fa-play"></i> Demo</span>`
+      :`<img src="${d.media}" alt="${d.title}" loading="lazy"/><span class="mbadge i"><i class="fas fa-camera"></i> Preview</span>`;
   } else {
     const ic=d.mediaType==='video'
-      ?`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>`
-      :`<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`;
+      ?`<i class="fas fa-video" style="font-size:32px"></i>`
+      :`<i class="fas fa-image" style="font-size:32px"></i>`;
     m.innerHTML=`<div class="pmedia-ph">${ic}<span>${d.mediaType==='video'?'Add demo.mp4':'Add screenshot'}</span></div>`;
   }
   document.getElementById('p-tag').textContent=d.tag;
@@ -54,11 +37,14 @@ function show(key){
   const sc=d.ac==='purple'?'p':d.ac==='green'?'g':'';
   document.getElementById('p-stack').innerHTML=d.stack.map(t=>`<span class="stk ${sc}">${t}</span>`).join('');
   const gh=document.getElementById('p-gh');
-  gh.href=d.gh;gh.className=`pgh-btn ${sc}`;gh.innerHTML=`${GH} View Code on GitHub`;
+  gh.href=d.gh;gh.className=`pgh-btn ${sc}`;gh.innerHTML=`<i class="fab fa-github"></i> View Code on GitHub`;
   popup.classList.add('on');
 }
+
+// Hide popup
 function hide(){hideTimer=setTimeout(()=>popup.classList.remove('on'),150)}
 
+// Attach popup triggers
 document.querySelectorAll('[id^="trigger-"]').forEach(el=>{
   const key=el.id.replace('trigger-','');
   el.addEventListener('mouseenter',()=>show(key));
@@ -67,8 +53,185 @@ document.querySelectorAll('[id^="trigger-"]').forEach(el=>{
 popup.addEventListener('mouseenter',()=>clearTimeout(hideTimer));
 popup.addEventListener('mouseleave',hide);
 
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
-},{threshold:.07,rootMargin:'0px 0px -44px 0px'});
 
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+
+// Intersection Observer for fade-in elements
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const delay = e.target.dataset.delay || 0;
+      setTimeout(() => {
+        e.target.classList.add('vis');
+      }, parseInt(delay));
+      fadeObserver.unobserve(e.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+// Observe all fade-in elements
+document.querySelectorAll('.fi, .spine-closing').forEach(el => fadeObserver.observe(el));
+
+
+
+const chapterObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      // Add pulse animation to node on scroll into view
+      const node = e.target.querySelector('.node');
+      if(node){
+        node.style.animation = 'nodePulse 0.6s ease';
+        setTimeout(() => {
+          node.style.animation = '';
+        }, 600);
+      }
+      e.target.classList.add('vis');
+      chapterObserver.unobserve(e.target);
+    }
+  });
+}, {
+  threshold: 0.15,
+  rootMargin: '0px 0px -80px 0px'
+});
+
+// Observe all chapters
+document.querySelectorAll('.chapter').forEach(ch => chapterObserver.observe(ch));
+
+// Add node pulse animation to CSS dynamically
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes nodePulse {
+    0% { transform: scale(1); box-shadow: 0 0 12px currentColor; }
+    50% { transform: scale(1.5); box-shadow: 0 0 35px currentColor; }
+    100% { transform: scale(1); box-shadow: 0 0 12px currentColor; }
+  }
+`;
+document.head.appendChild(style);
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+
+
+let ticking = false;
+
+function updateOrbsParallax(){
+  const scrollY = window.scrollY;
+  const orb1 = document.querySelector('.orb1');
+  const orb2 = document.querySelector('.orb2');
+  
+  if(orb1) orb1.style.transform = `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.05}deg)`;
+  if(orb2) orb2.style.transform = `translateY(${scrollY * 0.2}px) rotate(${-scrollY * 0.03}deg)`;
+  
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if(!ticking){
+    window.requestAnimationFrame(updateOrbsParallax);
+    ticking = true;
+  }
+});
+
+
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+function updateActiveNav(){
+  const scrollY = window.scrollY + 100;
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+    
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if(link.getAttribute('href') === `#${sectionId}`){
+          link.style.color = 'var(--accent)';
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav);
+updateActiveNav();
+
+
+
+document.querySelectorAll('.ptrig').forEach(trigger => {
+  trigger.addEventListener('mouseenter', function(){
+    this.style.transform = 'translateY(-3px) scale(1.02)';
+  });
+  
+  trigger.addEventListener('mouseleave', function(){
+    this.style.transform = '';
+  });
+});
+
+// ═══════════════════════════════════════════════════════════
+// TYPING EFFECT FOR HERO (OPTIONAL - UNCOMMENT TO USE)
+// ═══════════════════════════════════════════════════════════
+
+/*
+const heroName = document.querySelector('.hero-name');
+if(heroName){
+  const text = heroName.innerHTML;
+  heroName.innerHTML = '';
+  heroName.style.opacity = '1';
+  
+  let index = 0;
+  function typeWriter(){
+    if(index < text.length){
+      heroName.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  
+  setTimeout(typeWriter, 500);
+}
+*/
+
+
+document.querySelectorAll('.sg').forEach(card => {
+  card.addEventListener('mouseenter', function(){
+    this.style.transform = 'translateY(-5px) scale(1.02)';
+  });
+  
+  card.addEventListener('mouseleave', function(){
+    this.style.transform = '';
+  });
+});
+
+
+
+console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00e5ff;');
+console.log('%cLike what you see? Let\'s build something together!', 'font-size: 14px; color: #4e6a8a;');
+console.log('%c🔗 GitHub: https://github.com/tumblr-byte', 'font-size: 12px; color: #7b61ff;');
+
+
+
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('*').forEach(el => {
+    el.style.animation = 'none';
+    el.style.transition = 'none';
+  });
+}
