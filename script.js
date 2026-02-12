@@ -118,19 +118,23 @@ style.textContent = `
 document.head.appendChild(style);
 
 
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target){
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    const href = this.getAttribute('href');
+    // Only handle internal anchors, skip external links
+    if(href && href.startsWith('#')){
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if(target){
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     }
   });
 });
+
 
 
 
@@ -238,4 +242,5 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
