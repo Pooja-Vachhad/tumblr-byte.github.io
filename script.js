@@ -44,6 +44,13 @@ function show(key){
 // Hide popup
 function hide(){hideTimer=setTimeout(()=>popup.classList.remove('on'),150)}
 
+// Fix GitHub link clicks - prevents popup from blocking navigation
+popup.addEventListener('click', function(e) {
+  if(e.target.closest('#p-gh')) {
+    e.stopPropagation();
+  }
+});
+
 // Attach popup triggers
 document.querySelectorAll('[id^="trigger-"]').forEach(el=>{
   const key=el.id.replace('trigger-','');
@@ -186,9 +193,7 @@ document.querySelectorAll('.ptrig').forEach(trigger => {
   });
 });
 
-// ═══════════════════════════════════════════════════════════
-// TYPING EFFECT FOR HERO (OPTIONAL - UNCOMMENT TO USE)
-// ═══════════════════════════════════════════════════════════
+
 
 /*
 const heroName = document.querySelector('.hero-name');
@@ -223,9 +228,7 @@ document.querySelectorAll('.sg').forEach(card => {
 
 
 
-console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #00e5ff;');
-console.log('%cLike what you see? Let\'s build something together!', 'font-size: 14px; color: #4e6a8a;');
-console.log('%c🔗 GitHub: https://github.com/tumblr-byte', 'font-size: 12px; color: #7b61ff;');
+
 
 
 
