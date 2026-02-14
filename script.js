@@ -139,17 +139,6 @@ function show(key){
   gh.className=`pgh-btn ${sc}`;
   gh.innerHTML=`<i class="fab fa-github"></i> View Code on GitHub`;
   
-  // Set Demo button (show/hide based on availability)
-  const demo=document.getElementById('p-demo');
-  if(d.demo){
-    demo.style.display='inline-flex';
-    demo.href=d.demo;
-    demo.className=`pgh-btn ${sc}`;
-    demo.innerHTML=`<i class="fas fa-external-link-alt"></i> Live Demo`;
-  } else {
-    demo.style.display='none';
-  }
-  
   popup.classList.add('on');
 }
 
@@ -158,9 +147,9 @@ function hide(){
   hideTimer=setTimeout(()=>popup.classList.remove('on'),150);
 }
 
-// Fix GitHub and Demo link clicks - prevents popup from blocking navigation
+// Fix GitHub link clicks - prevents popup from blocking navigation
 popup.addEventListener('click', function(e) {
-  if(e.target.closest('#p-gh') || e.target.closest('#p-demo')) {
+  if(e.target.closest('#p-gh')) {
     e.stopPropagation();
   }
 });
@@ -329,7 +318,3 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
-
-
-
-
