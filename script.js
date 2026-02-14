@@ -1,6 +1,6 @@
 const DATA={
   defect: {
-    tag: "Production Project · Transfer Learning · Feb 2026",
+    tag: "Production Project · Transfer Learning · Feb 2025",
     title: "Industrial Defect Detection",
     desc: "ResNet-18 with transfer learning for metal casting quality control. Production-ready system with early stopping, ImageNet pretraining, and proper train-val-test split. Zero false rejections of good parts.",
     stats: [
@@ -139,6 +139,19 @@ function show(key){
   gh.className=`pgh-btn ${sc}`;
   gh.innerHTML=`<i class="fab fa-github"></i> View Code on GitHub`;
   
+  // Set Demo button (show only if demo link exists)
+  const demo=document.getElementById('p-demo');
+  if(demo){
+    if(d.demo){
+      demo.style.display='inline-flex';
+      demo.href=d.demo;
+      demo.className=`pgh-btn ${sc}`;
+      demo.innerHTML=`<i class="fas fa-external-link-alt"></i> Live Demo`;
+    } else {
+      demo.style.display='none';
+    }
+  }
+  
   popup.classList.add('on');
 }
 
@@ -147,9 +160,9 @@ function hide(){
   hideTimer=setTimeout(()=>popup.classList.remove('on'),150);
 }
 
-// Fix GitHub link clicks - prevents popup from blocking navigation
+// Fix GitHub and Demo link clicks - prevents popup from blocking navigation
 popup.addEventListener('click', function(e) {
-  if(e.target.closest('#p-gh')) {
+  if(e.target.closest('#p-gh') || e.target.closest('#p-demo')) {
     e.stopPropagation();
   }
 });
@@ -318,4 +331,3 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
-
