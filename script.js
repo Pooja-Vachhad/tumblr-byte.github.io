@@ -1,6 +1,6 @@
 const DATA={
   defect: {
-  tag: "Production Project · Transfer Learning · Feb 2026",
+  tag: "Production Project · Transfer Learning · Feb 2025",
   title: "Industrial Defect Detection",
   desc: "ResNet-18 with transfer learning for metal casting quality control. Production-ready system with early stopping, ImageNet pretraining, and proper train-val-test split. Zero false rejections of good parts.",
   stats: [
@@ -12,6 +12,7 @@ const DATA={
   stack: ["PyTorch", "ResNet-18", "Transfer Learning", "Early Stopping", "Streamlit"],
   ac: "purple",
   gh: "https://github.com/tumblr-byte/defect-detection",
+  demo: "https://detectingdefect.streamlit.app/",  
   media: "defect.png",
   mediaType: "img"
 },
@@ -257,6 +258,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
 
 
