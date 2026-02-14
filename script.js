@@ -1,5 +1,20 @@
 const DATA={
-  defect:{tag:"Production Project · Transfer Learning · Built Feb 2026",title:"Industrial Defect Detection",desc:"ResNet-18 with transfer learning for metal casting quality control. Built with production standards: augmentation, early stopping, fine-tuning, ONNX export. 0% false positives.",stats:[{v:"99.72%",l:"Validation Accuracy",c:"p"},{v:"99.56%",l:"Defect Detection",c:"p"},{v:"0%",l:"False Positive Rate",c:"p"},{v:"ONNX",l:"Deployment Ready",c:""}],stack:["PyTorch","ResNet-18","Transfer Learning","ONNX","Early Stopping"],ac:"purple",gh:"https://github.com/tumblr-byte/defect-detection",media:"defect.png",mediaType:"img"},
+  defect: {
+  tag: "Production Project · Transfer Learning · Feb 2026",
+  title: "Industrial Defect Detection",
+  desc: "ResNet-18 with transfer learning for metal casting quality control. Production-ready system with early stopping, ImageNet pretraining, and proper train-val-test split. Zero false rejections of good parts.",
+  stats: [
+    {v: "99.44%", l: "Test Accuracy", c: "p"},
+    {v: "99.17%", l: "Defect Detection", c: "p"},
+    {v: "0%", l: "False Positive Rate", c: "p"},
+    {v: "100%", l: "Precision (Defective)", c: "p"}
+  ],
+  stack: ["PyTorch", "ResNet-18", "Transfer Learning", "Early Stopping", "Streamlit"],
+  ac: "purple",
+  gh: "https://github.com/tumblr-byte/defect-detection",
+  media: "defect.png",
+  mediaType: "img"
+},
   fall:{tag:"Production Project · Real-Time · Built Oct 2025",title:"Safe Fall Detection — Elderly Care",desc:"Falls lasting 10+ seconds trigger alerts to family dashboard and 3 nearby hospitals with snapshot, location, and patient info.",stats:[{v:"10s",l:"Alert Threshold",c:""},{v:"3",l:"Hospitals Notified",c:""},{v:"YOLO",l:"Model",c:""}],stack:["YOLO","DeepSORT","OpenCV","Streamlit","Python"],ac:"cyan",gh:"https://github.com/tumblr-byte/safe-fall-detection",media:"safe fall.mp4",mediaType:"video"},
   mask:{tag:"Production Project · Two-Stage Detection · Built June 2025",title:"Face Mask Detection — Faster R-CNN",desc:"Faster R-CNN ResNet-50-FPN fine-tuned on 853 annotated images. 3-class: proper mask, no mask, incorrectly worn. Built from COCO weights with Pascal VOC annotations.",stats:[{v:"73.0%",l:"mAP@0.5",c:"p"},{v:"853",l:"Images",c:"p"},{v:"3",l:"Classes",c:"p"},{v:"26",l:"Epochs",c:""}],stack:["Faster R-CNN","ResNet-50-FPN","PyTorch","Pascal VOC"],ac:"purple",gh:"https://github.com/tumblr-byte/Face-Mask-Detection-using-Faster-R-CNN",media:"mask.jpg",mediaType:"img"},
   face:{tag:"Production Project · Real-Time Filters · Built Oct 2025",title:"Custom Face Blur & Overlay Filter",desc:"Real-time webcam face filter with known/unknown discrimination. Apply blur or overlays to specific people or everyone except them. Handles multiple faces simultaneously.",stats:[{v:"Real-Time",l:"Webcam",c:""},{v:"Multi-Face",l:"Simultaneous",c:""},{v:"Known/Unknown",l:"Filter Logic",c:""},{v:"OpenCV",l:"Backend",c:""}],stack:["face_recognition","OpenCV","MediaPipe","Python"],ac:"cyan",gh:"https://github.com/tumblr-byte/Custom-Face-Blur-Overlay-Filter",media:"filter.png",mediaType:"img"},
@@ -242,5 +257,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
 
