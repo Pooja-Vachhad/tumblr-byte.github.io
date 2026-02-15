@@ -57,6 +57,7 @@ const DATA={
     stack:["MediaPipe","PyTorch","OpenCV","Pandas","scikit-learn"],
     ac:"cyan",
     gh:"https://github.com/tumblr-byte/AI-Yoga-Pose-Classifier",
+    demo: "https://ai-yoga-pose-classifie.streamlit.app/",  
     media:"yoga.jpg",
     mediaType:"img"
   },
@@ -331,4 +332,5 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
