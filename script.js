@@ -91,6 +91,7 @@ const DATA={
     stack:["PyTorch","U-Net","ResNet34","Albumentations","Medical Imaging"],
     ac:"purple",
     gh:"https://github.com/tumblr-byte/lung-segmentation-unet",
+    demo: "https://lung-segmentation-unet.streamlit.app/",  
     media:"lung.png",
     mediaType:"img"
   }
@@ -332,5 +333,6 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
 
