@@ -31,7 +31,7 @@ const DATA={
     tag:"Production Project · Two-Stage Detection · Built June 2025",
     title:"Face Mask Detection — Faster R-CNN",
     desc:"Faster R-CNN ResNet-50-FPN fine-tuned on 853 annotated images. 3-class: proper mask, no mask, incorrectly worn. Built from COCO weights with Pascal VOC annotations.",
-    stats:[{v:"73.0%",l:"mAP@0.5",c:"p"},{v:"853",l:"Images",c:"p"},{v:"3",l:"Classes",c:"p"},{v:"26",l:"Epochs",c:""}],
+    stats:[{v:"86.5%",l:"mAP@0.5",c:"p"},{v:"853",l:"Images",c:"p"},{v:"3",l:"Classes",c:"p"},{v:"15",l:"Epochs",c:""}],
     stack:["Faster R-CNN","ResNet-50-FPN","PyTorch","Pascal VOC"],
     ac:"purple",
     gh:"https://github.com/tumblr-byte/Face-Mask-Detection-using-Faster-R-CNN",
@@ -333,6 +333,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
 
 
