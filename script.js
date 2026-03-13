@@ -11,7 +11,7 @@ const DATA={
     ],
     stack: ["PyTorch", "ResNet-18", "Transfer Learning", "Early Stopping", "Streamlit"],
     ac: "purple",
-    gh: "https://github.com/tumblr-byte/defect-detection",
+    gh: "https://github.com/Pooja-Vachhad/defect-detection",
     demo: "https://detectingdefect.streamlit.app/",  
     media: "defect.png",
     mediaType: "img"
@@ -23,7 +23,7 @@ const DATA={
     stats:[{v:"10s",l:"Alert Threshold",c:""},{v:"3",l:"Hospitals Notified",c:""},{v:"YOLO",l:"Model",c:""}],
     stack:["YOLO","DeepSORT","OpenCV","Streamlit","Python"],
     ac:"cyan",
-    gh:"https://github.com/tumblr-byte/safe-fall-detection",
+    gh:"https://github.com/Pooja-Vachhad/safe-fall-detection",
     media:"safe fall.mp4",
     mediaType:"video"
   },
@@ -34,7 +34,7 @@ const DATA={
     stats:[{v:"86.5%",l:"mAP@0.5",c:"p"},{v:"853",l:"Images",c:"p"},{v:"3",l:"Classes",c:"p"},{v:"15",l:"Epochs",c:""}],
     stack:["Faster R-CNN","ResNet-50-FPN","PyTorch","Pascal VOC"],
     ac:"purple",
-    gh:"https://github.com/tumblr-byte/Face-Mask-Detection-using-Faster-R-CNN",
+    gh:"https://github.com/Pooja-Vachhad/Face-Mask-Detection-using-Faster-R-CNN",
     media:"mask.jpg",
     mediaType:"img"
   },
@@ -45,7 +45,7 @@ const DATA={
     stats:[{v:"Real-Time",l:"Webcam",c:""},{v:"Multi-Face",l:"Simultaneous",c:""},{v:"Known/Unknown",l:"Filter Logic",c:""},{v:"OpenCV",l:"Backend",c:""}],
     stack:["face_recognition","OpenCV","MediaPipe","Python"],
     ac:"cyan",
-    gh:"https://github.com/tumblr-byte/Custom-Face-Blur-Overlay-Filter",
+    gh:"https://github.com/Pooja-Vachhad/Custom-Face-Blur-Overlay-Filter",
     media:"filter.png",
     mediaType:"img"
   },
@@ -56,7 +56,7 @@ const DATA={
     stats:[{v:"95.4%",l:"Val. Accuracy",c:""},{v:"97.2%",l:"Train Accuracy",c:""},{v:"99",l:"Input Features",c:""},{v:"~50KB",l:"Model Size",c:""}],
     stack:["MediaPipe","PyTorch","OpenCV","Pandas","scikit-learn"],
     ac:"cyan",
-    gh:"https://github.com/tumblr-byte/AI-Yoga-Pose-Classifier",
+    gh:"https://github.com/Pooja-Vachhad/AI-Yoga-Pose-Classifier",
     demo: "https://ai-yoga-pose-classifie.streamlit.app/",  
     media:"yoga.jpg",
     mediaType:"img"
@@ -68,7 +68,7 @@ const DATA={
     stats:[{v:"4 Classes",l:"YOLO Detection",c:"p"},{v:"CRNN",l:"From Scratch",c:"p"},{v:"5-Frame",l:"Violation Rule",c:"p"},{v:"ONNX",l:"Deployment Ready",c:""}],
     stack:["YOLO","DeepSORT","CRNN","Bi-LSTM","CTC","ONNX","OpenCV"],
     ac:"purple",
-    gh:"https://github.com/tumblr-byte/Helmet_Detection",
+    gh:"https://github.com/Pooja-Vachhad/Helmet_Detection",
     media:"helmet.mp4",
     mediaType:"video"
   },
@@ -79,7 +79,7 @@ const DATA={
     stats:[{v:"< 60s",l:"Response Time",c:"g"},{v:"RAG",l:"No Hallucinations",c:"g"},{v:"2s",l:"Gemini Triage",c:"g"},{v:"Datadog",l:"LLM Monitoring",c:"g"}],
     stack:["Gemini 2.5 Flash","Vertex AI","Django","ElevenLabs","RAG","Datadog","GCP"],
     ac:"green",
-    gh:"https://github.com/tumblr-byte/MedBridge",
+    gh:"https://github.com/Pooja-Vachhad/MedBridge",
     media:"medbridge.mp4",
     mediaType:"video"
   },
@@ -90,7 +90,7 @@ const DATA={
     stats:[{v:"96.34%",l:"Validation Dice",c:"p"},{v:"96.76%",l:"Training Dice",c:"p"},{v:"256×256",l:"Input Size",c:""},{v:"U-Net",l:"Architecture",c:""}],
     stack:["PyTorch","U-Net","ResNet34","Albumentations","Medical Imaging"],
     ac:"purple",
-    gh:"https://github.com/tumblr-byte/lung-segmentation-unet",
+    gh:"https://github.com/Pooja-Vachhad/lung-segmentation-unet",
     demo: "https://lung-segmentation-unet.streamlit.app/",  
     media:"lung.png",
     mediaType:"img"
@@ -333,6 +333,7 @@ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     el.style.transition = 'none';
   });
 }
+
 
 
 
